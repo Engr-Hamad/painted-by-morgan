@@ -75,6 +75,22 @@
             margin: 0 auto; /* Center the wrapper */
         }
 
+        /* Footer Styles */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer a {
+            color: #AE7FFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
         /* Media Queries for Mobile Devices */
         @media (max-width: 768px) {
             h2 {
@@ -112,21 +128,27 @@
         <!-- Front Side of Business Card -->
         <div class="card-container">
             <img src="business-card-front.jpg" alt="Front of Business Card" class="card">
-            <a id="instagram" class="clickable-area" href="https://www.instagram.com/paintedbymorg/" target="_blank"></a>
-            <a id="facebook" class="clickable-area" href="https://facebook.com/PaintedByMorgan" target="_blank"></a>
-            <a id="phone" class="clickable-area" href="tel:+16788449763"></a>
-            <a id="location" class="clickable-area" href="https://www.google.com/maps/place/Jonesboro,+GA" target="_blank"></a>
-            <a id="website" class="clickable-area" href="https://paintedbymorgan.as.me/schedule/ac2bd5c0" target="_blank"></a>
-            <a id="follow" class="clickable-area" href="https://www.instagram.com/paintedbymorg/" target="_blank"></a> <!-- New Follow button -->
+            <a id="instagram" class="clickable-area" href="https://www.instagram.com/paintedbymorg/" target="_blank" aria-label="Instagram"></a>
+            <a id="facebook" class="clickable-area" href="https://facebook.com/PaintedByMorgan" target="_blank" aria-label="Facebook"></a>
+            <a id="phone" class="clickable-area" href="tel:+16788449763" aria-label="Call Morgan"></a>
+            <a id="location" class="clickable-area" href="https://www.google.com/maps/place/Jonesboro,+GA" target="_blank" aria-label="Location"></a>
+            <a id="website" class="clickable-area" href="https://paintedbymorgan.as.me/schedule/ac2bd5c0" target="_blank" aria-label="Book an Appointment"></a>
+            <a id="follow" class="clickable-area" href="https://www.instagram.com/paintedbymorg/" target="_blank" aria-label="Follow on Instagram"></a> <!-- New Follow button -->
         </div>
 
         <!-- Back Side of Business Card -->
         <div class="card-container">
             <img src="business-card-back.jpg" alt="Back of Business Card" class="card">
-            <a id="qr-code" class="clickable-area" href="https://paintedbymorgan.as.me/schedule/ac2bd5c0" target="_blank"></a>
+            <a id="qr-code" class="clickable-area" href="https://paintedbymorgan.as.me/schedule/ac2bd5c0" target="_blank" aria-label="Scan QR Code"></a>
         </div>
 
     </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Painted by Morgan. All rights reserved.<br>
+        Designed by <a href="https://www.fiverr.com/s/42R24rx" target="_blank">Hammad @ Gorilla Designs</a>
+    </footer>
 
 </body>
 </html>
