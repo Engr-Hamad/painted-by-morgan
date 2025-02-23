@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painted by Morgan</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(to bottom, #EFD0E3, #AE7FFF); /* Updated gradient colors */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-container {
+            position: relative;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the card container */
+            border-radius: 10px; /* Optional: Adds rounded corners to the shadow */
+        }
+        .card {
+            width: 577px; /* Set to the exact width of your image */
+            height: 1067px; /* Set to the exact height of your image */
+            max-width: 100%;
+            display: block;
+            border-radius: 10px; /* Optional: Adds rounded corners to the images */
+        }
+        .clickable-area {
+            position: absolute;
+            background: rgba(255, 255, 255, 0); /* Invisible clickable area */
+            cursor: pointer;
+        }
+        /* Layout: Place images side by side */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adds spacing between images */
+            flex-wrap: wrap; /* Ensures responsiveness */
+        }
+        /* Clickable areas for the front card */
+        #instagram { top: 1%; left: 33%; width: 34%; height: 6%; }
+        #facebook { top: 30%; left: 3%; width: 41%; height: 3%; }
+        #phone { top: 33%; left: 3%; width: 29%; height: 3%; }
+        #location { top: 37%; left: 3%; width: 41%; height: 3%; }
+        #website { top: 41%; left: 3%; width: 49%; height: 3%; }
+        #follow { top: 17%; left: 45%; width: 41%; height: 4%; } /* New clickable area for Follow */
+        /* Clickable QR code on the back card */
+        #qr-code { top: 39%; left: 29%; width: 43%; height: 22%; }
+        h2 {
+            color: black;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .paint-emoji {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for the paint emoji */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Morgan the Mua <span class="paint-emoji">🎨</span></h2> <!-- Added paint emoji with shadow -->
+
+    <!-- Wrapper to align both images side by side -->
+    <div class="wrapper">
+
+        <!-- Front Side of Business Card -->
+        <div class="card-container">
+            <img src="business-card-front.jpg" alt="Front of Business Card" class="card">
+            <a id="instagram" class="clickable-area" href="https://www.instagram.com/paintedbymorg/" target="_blank"></a>
+            <a id="facebook" class="clickable-area" href="https://facebook.com/PaintedByMorgan" target="_blank"></a>
+            <a id="phone" class="clickable-area" href="tel:+16788449763"></a>
+            <a id="location" class="clickable-area" href="https://www.google.com/maps/place/Jonesboro,+GA" target="_blank"></a>
+            <a id="website" class="clickable-area" href="https://paintedbymorgan.as.me/schedule/ac2bd5c0" target="_blank"></a>
+            <a id="follow" class="clickable-area" href="https://www.instagram.com/paintedbymorg/" target="_blank"></a> <!-- New Follow button -->
+        </div>
+
+        <!-- Back Side of Business Card -->
+        <div class="card-container">
+            <img src="business-card-back.jpg" alt="Back of Business Card" class="card">
+            <a id="qr-code" class="clickable-area" href="https://paintedbymorgan.as.me/schedule/ac2bd5c0" target="_blank"></a>
+        </div>
+
+    </div>
+
+</body>
+</html>
