@@ -5,43 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painted by Morgan</title>
     <style>
+        /* General Styles */
         body {
             text-align: center;
-            background: linear-gradient(to bottom, #EFD0E3, #AE7FFF); /* Updated gradient colors */
+            background: linear-gradient(to bottom, #EFD0E3, #AE7FFF); /* Gradient background */
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            height: 100vh;
+            padding: 20px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+
+        h2 {
+            color: black;
+            font-size: 2rem; /* Default font size */
+            margin-bottom: 20px;
+        }
+
+        .paint-emoji {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for the paint emoji */
+        }
+
+        /* Card Container */
         .card-container {
             position: relative;
             display: inline-block;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the card container */
-            border-radius: 10px; /* Optional: Adds rounded corners to the shadow */
+            border-radius: 10px; /* Rounded corners */
+            width: 100%; /* Full width by default */
+            max-width: 577px; /* Maximum width for larger screens */
+            margin: 10px; /* Spacing between cards */
         }
+
         .card {
-            width: 577px; /* Set to the exact width of your image */
-            height: 1067px; /* Set to the exact height of your image */
-            max-width: 100%;
-            display: block;
-            border-radius: 10px; /* Optional: Adds rounded corners to the images */
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
         }
+
+        /* Clickable Areas */
         .clickable-area {
             position: absolute;
             background: rgba(255, 255, 255, 0); /* Invisible clickable area */
             cursor: pointer;
         }
-        /* Layout: Place images side by side */
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Adds spacing between images */
-            flex-wrap: wrap; /* Ensures responsiveness */
-        }
+
         /* Clickable areas for the front card */
         #instagram { top: 1%; left: 33%; width: 34%; height: 6%; }
         #facebook { top: 30%; left: 3%; width: 41%; height: 3%; }
@@ -49,15 +60,44 @@
         #location { top: 37%; left: 3%; width: 41%; height: 3%; }
         #website { top: 41%; left: 3%; width: 49%; height: 3%; }
         #follow { top: 17%; left: 45%; width: 41%; height: 4%; } /* New clickable area for Follow */
+
         /* Clickable QR code on the back card */
         #qr-code { top: 39%; left: 29%; width: 43%; height: 22%; }
-        h2 {
-            color: black;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+
+        /* Wrapper for Cards */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adds spacing between images */
+            flex-wrap: wrap; /* Ensures responsiveness */
+            width: 100%; /* Full width */
+            max-width: 1200px; /* Maximum width for larger screens */
+            margin: 0 auto; /* Center the wrapper */
         }
-        .paint-emoji {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for the paint emoji */
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem; /* Smaller font size for smaller screens */
+            }
+            .card-container {
+                width: 90%; /* Slightly smaller width for mobile */
+            }
+            .wrapper {
+                gap: 10px; /* Reduce spacing between images */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.2rem; /* Even smaller font size for very small screens */
+            }
+            .card-container {
+                width: 100%; /* Full width for very small screens */
+            }
+            .wrapper {
+                gap: 5px; /* Minimal spacing */
+            }
         }
     </style>
 </head>
